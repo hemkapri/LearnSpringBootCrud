@@ -16,6 +16,17 @@ public class Student {
     @Column(nullable = false, unique = true)
     private String address;
 
+    public Student(Long studentId, String firstName, String lastName, String address) {
+        this.studentId = studentId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+    }
+
+    public Student() {
+
+    }
+
     public Long getStudentId() {
         return studentId;
     }

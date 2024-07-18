@@ -9,8 +9,6 @@ import MyTestClasses.ImmutableTesting;
 @RestController
 public class DummyController {
 
-    @Autowired
-    ImmutableTesting object;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test(){return "My name is Hem Kapri";}
