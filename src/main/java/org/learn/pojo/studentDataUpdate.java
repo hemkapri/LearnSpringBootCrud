@@ -1,31 +1,39 @@
-package org.learn.entity;
+package org.learn.pojo;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
 
-@Entity
-@Table(name = "students")
-public class Student {
+public class studentDataUpdate {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long studentId;
-    @Column(nullable = false)
+
     private String firstName;
-    @Column(nullable = false)
+
     private String lastName;
-    @Column(nullable = false)
+
     private String address;
 
-    public Student(Long studentId, String firstName, String lastName, String address) {
+    public studentDataUpdate(Long studentId, String firstName, String lastName, String address) {
         this.studentId = studentId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
     }
 
-    public Student() {
+    @Override
+    public String toString() {
+        return "studentDataUpdate{" +
+                "studentId=" + studentId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+    public studentDataUpdate() {
 
     }
+
+
 
     public Long getStudentId() {
         return studentId;
