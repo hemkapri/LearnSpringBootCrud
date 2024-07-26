@@ -2,7 +2,8 @@ package org.learn.pojo;
 
 import jakarta.persistence.Column;
 
-public class studentDataUpdate {
+public class
+studentDataUpdate {
 
     private Long studentId;
 
